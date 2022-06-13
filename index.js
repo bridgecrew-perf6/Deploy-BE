@@ -33,5 +33,11 @@ app.use(cors());
 app.use("/api/v1/", router);
 app.use("/uploads", express.static("uploads"));
 
+app.get('/', function (req, res) {
+  res.send({
+    message: "Hello Deploy"
+  });
+})
+
 // change app to server
 server.listen(port, () => console.log(`Listening on port ${port}!`));
